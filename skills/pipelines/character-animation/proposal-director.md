@@ -24,6 +24,10 @@ Each option must include:
 
 Read `skills/meta/animation-runtime-selector.md` before recommending a runtime.
 
+**HARD RULE: Present Both Composition Runtimes** — When both Remotion and HyperFrames are available, the agent must present both options to the user and record a `render_runtime_selection` decision in the decision log. Do not silently default to Remotion.
+
+Set the `render_runtime` field (`remotion` or `hyperframes`) only after the user explicitly approves the choice.
+
 When both Remotion and HyperFrames are available:
 
 - Remotion: best when the final composition needs deterministic React-rendered
